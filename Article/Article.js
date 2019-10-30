@@ -165,7 +165,7 @@ data.push({
   date: 'June 6, 1966',
   firstParagraph: 'ARE YOU READY TO JOIN OUR CULT DEDICATED TO CARBS',
   secondParagraph: 'ALL PRAISE YEASTIANITY. CARBS CARBS CARBS.',
-  thirdParagraph: 'bread bread bread baguette croissant bread bread bread ciabatta',
+  thirdParagraph: 'bread bread bread baguette croissant bread bread bread ciabatta white bread soda bread rye brown naan sourdough paratha injera chapati focaccia muffin cornbread bagel brioche roti banana bread biscuit butter these biscuits yo what up i love bread i hope you love bread too or else we can never be friends or let alone together tortilla whatttttt ENGLISH MUFFINS',
 });
 
 data.forEach(article => body.appendChild(createArticle(article)));
