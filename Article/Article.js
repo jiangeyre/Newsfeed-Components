@@ -160,4 +160,13 @@ const articles = document.querySelectorAll('.article');
 
 const body = document.querySelector('body');
 
+data.push({
+  title: 'BREAD',
+  date: 'June 6, 1966',
+  firstParagraph: 'ARE YOU READY TO JOIN OUR CULT DEDICATED TO CARBS',
+  secondParagraph: 'ALL PRAISE YEASTIANITY. CARBS CARBS CARBS.',
+  thirdParagraph: 'bread bread bread baguette croissant bread bread bread ciabatta',
+});
+
 data.forEach(article => body.appendChild(createArticle(article)));
+
