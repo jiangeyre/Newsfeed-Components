@@ -112,3 +112,61 @@ const data = [
   Step 5: Add a new article to the array. Make sure it is in the same format as the others. Refresh the page to see the new article.
 
 */
+
+function createArticle(article){
+  //creating the conatainer div
+  const articleDiv = document.createElement('div');
+  articleDiv.classList.add("article");
+
+  //creating the h2 headline for titles
+  const h2Tit = document.createElement('h2');
+  h2Tit.textContent = `${article.title}`;
+
+  //creating the date paragraph
+  const datePar = document.createElement('p');
+  datePar.classList.add("date");
+  datePar.textContent = `${article.date}`;
+
+  //creating paragraph elements of the body
+  const par1 = document.createElement('p');
+  par1.textContent = `${article.firstParagraph}`;
+
+  const par2 = document.createElement('p');
+  par2.textContent = `${article.secondParagraph}`;
+
+  const par3 = document.createElement('p');
+  par3.textContent = `${article.thirdParagraph}`;
+
+  //creating the expending span
+  const expandable = document.createElement('span');
+  expandable.classList.add("expandButton");
+  expandable.textContent = "Expand";
+  expandable.addEventListener('click', () => {
+    articleDiv.classList.toggle("article-open");
+  });
+
+  //populate the articleDiv
+  articleDiv.appendChild(h2Tit);
+  articleDiv.appendChild(datePar);
+  articleDiv.appendChild(par1);
+  articleDiv.appendChild(par2);
+  articleDiv.appendChild(par3);
+  articleDiv.appendChild(expandable);
+
+  return articleDiv;
+}
+
+const articles = document.querySelectorAll('.article');
+
+const body = document.querySelector('body');
+
+data.push({
+  title: 'BREAD',
+  date: 'June 6, 1966',
+  firstParagraph: 'ARE YOU READY TO JOIN OUR CULT DEDICATED TO CARBS',
+  secondParagraph: 'ALL PRAISE YEASTIANITY. CARBS CARBS CARBS.',
+  thirdParagraph: 'bread bread bread baguette croissant bread bread bread ciabatta white bread soda bread rye brown naan sourdough paratha injera chapati focaccia muffin cornbread bagel brioche roti banana bread biscuit butter these biscuits yo what up i love bread i hope you love bread too or else we can never be friends or let alone together tortilla whatttttt ENGLISH MUFFINS',
+});
+
+data.forEach(article => body.appendChild(createArticle(article)));
+
